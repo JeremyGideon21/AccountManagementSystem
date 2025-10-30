@@ -85,27 +85,8 @@ This project is designed to practice **RESTful API development**, **transaction 
 | -------- | -------------------- | ------------------------------- |
 | **POST** | `/accounts/transfer` | Transfer funds between accounts |
 
-**Example Request**
 
-```json
-{
-  "fromAccount": 101,
-  "toAccount": 102,
-  "amount": 1500
-}
-```
 
-**Example Response**
-
-```json
-{
-  "message": "Transfer Successful",
-  "fromAccount": 101,
-  "toAccount": 102,
-  "amountTransferred": 1500,
-  "remainingBalance": 8500
-}
-```
 
 ---
 

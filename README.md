@@ -1,9 +1,13 @@
-# AccountManagementSystem
+Below is your **updated and expanded README.md** — combining your existing content **PLUS all new tasks (6–10)** in a clean, professional **Markdown format** ready for GitHub.
 
-# 🏦 Banking System API
+---
 
-A **Spring Boot** project that simulates a simple **banking platform** featuring account management, fund transfers, transaction tracking, and interest calculation.
-This project is designed to practice **RESTful API development**, **transaction handling**, and **data consistency** using **Spring Boot** and **MySQL**.
+# 🏦 AccountManagementSystem
+
+# Banking System API
+
+A **Spring Boot** project that simulates a simple **banking platform** supporting account management, fund transfers, transaction history, interest calculation, and additional banking/financial service APIs.
+This project is designed to strengthen skills in **RESTful API development**, **transaction handling**, **backend business logic**, **Spring Boot**, and **MySQL**.
 
 ---
 
@@ -12,45 +16,45 @@ This project is designed to practice **RESTful API development**, **transaction 
 ### 💰 Account Management
 
 * Create new bank accounts
-* Deposit and withdraw money
+* Deposit and withdraw funds
 * View account details and balance
 
 ### 🔁 Fund Transfers
 
-* Transfer money between two accounts
-* Ensures sufficient balance and prevents self-transfer
-* Uses `@Transactional` for atomic and consistent updates
+* Transfer money between accounts
+* Prevent self-transfer and insufficient balance
+* Fully transaction-safe using `@Transactional`
 
 ### 📜 Transaction History
 
-* Logs all deposits, withdrawals, and transfers
-* Retrieve the last *N* transactions for an account
+* Logs deposits, withdrawals, and transfers
+* Retrieve recent *N* transactions per account
 
 ### 📈 Interest Calculator
 
-* Calculates simple interest and total payable amount
+* Calculates simple interest
 * Formula: `(Principal × Rate × Time) / 100`
-* Validates for positive input values
+* Validates positive input
 
 ---
 
 ## 🧠 Tech Stack
 
-| Component      | Technology               |
-| -------------- | ------------------------ |
-| **Backend**    | Spring Boot 3.x          |
-| **Language**   | Java 17                  |
-| **Database**   | MySQL / H2 (for testing) |
-| **ORM**        | Spring Data JPA          |
-| **Validation** | Jakarta Bean Validation  |
-| **Testing**    | JUnit 5                  |
-| **Build Tool** | Maven                    |
+| Component      | Technology              |
+| -------------- | ----------------------- |
+| **Backend**    | Spring Boot 3.x         |
+| **Language**   | Java 17                 |
+| **Database**   | MySQL / H2 (testing)    |
+| **ORM**        | Spring Data JPA         |
+| **Validation** | Jakarta Bean Validation |
+| **Testing**    | JUnit 5                 |
+| **Build Tool** | Maven                   |
 
 ---
 
-## 🧾 API Endpoints
+# 🧾 API Endpoints
 
-### 1️⃣ Account Management
+## 1️⃣ Account Management
 
 | Method   | Endpoint                  | Description          |
 | -------- | ------------------------- | -------------------- |
@@ -59,7 +63,7 @@ This project is designed to practice **RESTful API development**, **transaction 
 | **POST** | `/accounts/{id}/deposit`  | Deposit funds        |
 | **POST** | `/accounts/{id}/withdraw` | Withdraw funds       |
 
-**Example Request**
+### Example Request
 
 ```json
 {
@@ -68,7 +72,7 @@ This project is designed to practice **RESTful API development**, **transaction 
 }
 ```
 
-**Example Response**
+### Example Response
 
 ```json
 {
@@ -79,24 +83,21 @@ This project is designed to practice **RESTful API development**, **transaction 
 
 ---
 
-### 2️⃣ Fund Transfer
+## 2️⃣ Fund Transfer
 
 | Method   | Endpoint             | Description                     |
 | -------- | -------------------- | ------------------------------- |
 | **POST** | `/accounts/transfer` | Transfer funds between accounts |
 
-
-
-
 ---
 
-### 3️⃣ Transaction History
+## 3️⃣ Transaction History
 
-| Method  | Endpoint                      | Description                                 |
-| ------- | ----------------------------- | ------------------------------------------- |
-| **GET** | `/accounts/{id}/transactions` | Retrieve last N transactions for an account |
+| Method  | Endpoint                      | Description               |
+| ------- | ----------------------------- | ------------------------- |
+| **GET** | `/accounts/{id}/transactions` | Fetch last N transactions |
 
-**Example Response**
+### Example Response
 
 ```json
 [
@@ -108,13 +109,13 @@ This project is designed to practice **RESTful API development**, **transaction 
 
 ---
 
-### 4️⃣ Interest Calculator
+## 4️⃣ Interest Calculator
 
-| Method   | Endpoint                     | Description                                        |
-| -------- | ---------------------------- | -------------------------------------------------- |
-| **POST** | `/api/v1/interest/calculate` | Calculate simple interest and total payable amount |
+| Method   | Endpoint                     | Description               |
+| -------- | ---------------------------- | ------------------------- |
+| **POST** | `/api/v1/interest/calculate` | Calculate simple interest |
 
-**Example Request**
+### Example Request
 
 ```json
 {
@@ -124,7 +125,7 @@ This project is designed to practice **RESTful API development**, **transaction 
 }
 ```
 
-**Example Response**
+### Example Response
 
 ```json
 {
@@ -136,7 +137,201 @@ This project is designed to practice **RESTful API development**, **transaction 
 
 ---
 
-## ⚙️ Setup Instructions
+# 📝 Additional Practice Tasks (F6–Task 10)
+
+The following tasks are a part of your **Backend Learning Module** and extend this project with more real-world banking logic.
+
+---
+
+## 🧮 **Task F6 – Interest Calculator API (Basic Version)**
+
+### Endpoint:
+
+`POST /calculateInterest`
+
+### Inputs:
+
+* principal
+* annual rate
+* time (years)
+
+### Output:
+
+* interest
+* totalAmount
+
+### Example
+
+```json
+{
+  "principal": 10000,
+  "rate": 6.5,
+  "time": 2
+}
+```
+
+```json
+{
+  "interest": 1300,
+  "totalAmount": 11300
+}
+```
+
+---
+
+## 🏦 **Task 6 – Loan Eligibility Checker**
+
+### Endpoint:
+
+`POST /loanEligibility`
+
+### Inputs:
+
+* age
+* annualIncome
+* creditScore
+* existingLoanAmount
+
+### Eligibility Rules:
+
+* Minimum age: **21**
+* Income must be **> ₹3,00,000 / year**
+* Credit score must be **≥ 700**
+* Loan-to-Income ratio **< 40%**
+
+### Output:
+
+* `"Eligible"` or `"Not Eligible"`
+* Reason message
+
+### Example
+
+```json
+{
+  "age": 25,
+  "annualIncome": 500000,
+  "creditScore": 720,
+  "existingLoanAmount": 100000
+}
+```
+
+---
+
+## 🏛️ **Task 7 – Fixed Deposit & Maturity Calculator**
+
+### Endpoint:
+
+`POST /fixedDeposit`
+
+### Inputs:
+
+* deposit amount
+* rate of interest
+* tenure (years)
+
+### Logic:
+
+* Uses **compound interest**
+* Optional: Premature withdrawal → 1% penalty
+
+### Example
+
+```json
+{
+  "amount": 50000,
+  "rate": 7,
+  "tenure": 3
+}
+```
+
+```json
+{
+  "maturityAmount": 61252,
+  "interestEarned": 11252
+}
+```
+
+---
+
+## 🧾 **Task 8 – Monthly Statement Generator**
+
+### Endpoint:
+
+`GET /statement/{accountId}?month=09&year=2025`
+
+### Output Includes:
+
+* Opening balance
+* Total deposits
+* Total withdrawals
+* Closing balance
+* Month-wise summary
+* Optional: CSV/PDF export
+
+### Example
+
+```json
+{
+  "month": "September",
+  "openingBalance": 15000,
+  "totalDeposits": 3000,
+  "totalWithdrawals": 2000,
+  "closingBalance": 16000
+}
+```
+
+---
+
+## 🛡️ **Task 9 – Simple Admin Dashboard API**
+
+### Endpoints:
+
+| Endpoint                | Purpose                           |
+| ----------------------- | --------------------------------- |
+| `/admin/totalCustomers` | Count all customers               |
+| `/admin/totalDeposits`  | Sum of all deposits               |
+| `/admin/topAccounts`    | Accounts with balance > ₹1,00,000 |
+| `/admin/loanSummary`    | Loan distribution report          |
+
+Focus: Aggregation queries, optimized SQL, clean JSON.
+
+---
+
+## 💳 **Task 10 – Credit Card Bill Calculator**
+
+### Endpoint:
+
+`POST /creditCardBill`
+
+### Inputs:
+
+* totalSpending
+* paymentsMade
+* dueDate
+* currentDate
+
+### Output:
+
+* pendingAmount
+* late interest (if overdue)
+* status: `"On Time"` or `"Late Payment"`
+
+---
+
+## 🏧 **Task 11 – Mini ATM Simulator**
+
+### Endpoints:
+
+* `POST /atm/validateCard`
+* `POST /atm/verifyPin`
+* `POST /atm/withdraw` (daily limit)
+* `GET /atm/balance`
+
+Can use dummy JSON data or database tables.
+
+---
+
+# ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
 
@@ -147,8 +342,6 @@ cd banking-system-api
 
 ### 2️⃣ Configure Database (MySQL)
 
-Edit the file `src/main/resources/application.properties`:
-
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/bankdb
 spring.datasource.username=root
@@ -157,34 +350,31 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
-> 💡 For quick testing, you can switch to the H2 in-memory database.
-
-### 3️⃣ Build & Run the Application
+### 3️⃣ Run the Application
 
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-App runs at:
-👉 **[http://localhost:8080](http://localhost:8080)**
+App runs at: **[http://localhost:8080](http://localhost:8080)**
 
 ---
 
 ## 🧪 Testing
 
-Run unit tests using:
-
 ```bash
 mvn test
 ```
 
-Includes:
+Tests include:
 
-* Interest calculation tests
-* Fund transfer validations
-* Deposit and withdrawal operations
-* Transaction history consistency checks
+* Interest calculator
+* Fund transfers
+* Loan eligibility
+* Fixed deposit
+* Transaction history
+* Admin dashboard metrics
 
 ---
 
@@ -195,32 +385,30 @@ src/
  ├── main/java/com/example/bankingsystem/
  │   ├── controller/       # REST Controllers
  │   ├── service/          # Business Logic
- │   ├── dto/              # Data Transfer Objects
- │   ├── model/            # Entity Models
+ │   ├── dto/              # DTOs
+ │   ├── model/            # Entities
  │   ├── repository/       # JPA Repositories
- │   └── exception/        # Exception Handling
- └── test/java/...         # JUnit Test Cases
+ │   └── exception/        # Global Error Handling
+ └── test/java/...         # JUnit Tests
 ```
 
 ---
 
 ## 💡 Highlights
 
-* Layered architecture for clean design
-* DTOs ensure smooth API data exchange
-* Robust validation and exception handling
-* Transaction-safe money transfers
-* Modular and reusable service layer
+* Clean layered architecture
+* Strong validation and exception handling
+* Transaction-safe money operations
+* Advanced banking simulation tasks
+* Ideal for backend learning & portfolio projects
 
 ---
 
 ## 👨‍💻 Author
 
 **JEREMY GIDEON**
+
 ---
 
 ## 🪪 License
 
-This project is licensed under the **MIT License** — feel free to use and modify it.
-
----

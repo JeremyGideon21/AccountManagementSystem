@@ -137,13 +137,9 @@ This project is designed to strengthen skills in **RESTful API development**, **
 
 ---
 
-# 📝 Additional Practice Tasks (F6–Task 10)
-
-The following tasks are a part of your **Backend Learning Module** and extend this project with more real-world banking logic.
-
 ---
 
-## 🧮 **Task F6 – Interest Calculator API (Basic Version)**
+## 🧮 **Task  – Interest Calculator API (Basic Version)**
 
 ### Endpoint:
 
@@ -179,7 +175,7 @@ The following tasks are a part of your **Backend Learning Module** and extend th
 
 ---
 
-## 🏦 **Task 6 – Loan Eligibility Checker**
+## 🏦 **Task 5 – Loan Eligibility Checker**
 
 ### Endpoint:
 
@@ -217,7 +213,7 @@ The following tasks are a part of your **Backend Learning Module** and extend th
 
 ---
 
-## 🏛️ **Task 7 – Fixed Deposit & Maturity Calculator**
+## 🏛️ **Task 6 – Fixed Deposit & Maturity Calculator**
 
 ### Endpoint:
 
@@ -253,7 +249,7 @@ The following tasks are a part of your **Backend Learning Module** and extend th
 
 ---
 
-## 🧾 **Task 8 – Monthly Statement Generator**
+## 🧾 **Task 7 – Monthly Statement Generator**
 
 ### Endpoint:
 
@@ -282,7 +278,7 @@ The following tasks are a part of your **Backend Learning Module** and extend th
 
 ---
 
-## 🛡️ **Task 9 – Simple Admin Dashboard API**
+## 🛡️ **Task 8 – Simple Admin Dashboard API**
 
 ### Endpoints:
 
@@ -297,7 +293,7 @@ Focus: Aggregation queries, optimized SQL, clean JSON.
 
 ---
 
-## 💳 **Task 10 – Credit Card Bill Calculator**
+## 💳 **Task 9 – Credit Card Bill Calculator**
 
 ### Endpoint:
 
@@ -318,7 +314,7 @@ Focus: Aggregation queries, optimized SQL, clean JSON.
 
 ---
 
-## 🏧 **Task 11 – Mini ATM Simulator**
+## 🏧 **Task 10 – Mini ATM Simulator**
 
 ### Endpoints:
 
